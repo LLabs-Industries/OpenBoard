@@ -30,3 +30,4 @@ Use at your own risk and always follow proper electrical safety practices.
 
 ## Circuit Schematics
 <!-- Paste circuit diagrams, schematics images, or links below -->
+Until i can figure out how to paste schematics onto the read me ill upload jpegs or PDFs on the project itself
