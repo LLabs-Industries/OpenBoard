@@ -24,19 +24,19 @@ void setup() {
   delay(100);
   lcd_1.print("LLabs Industries");
   lcd_1.setCursor(0,1);
-  lcd_1.print("Est 2011");
+  lcd_1.print("    Est 2011");
   lcd_1.setCursor(0,0);
   delay(1000);
   lcd_1.clear();
   lcd_1.print("PBC Engineering");
   lcd_1.setCursor(0,1);
-  lcd_1.print("Est 2003");
+  lcd_1.print("    Est 2003");
   lcd_1.setCursor(0,0);
   delay(1000);
   lcd_1.clear();
-  lcd_1.print("By Mr");
+  lcd_1.print("       By ");
   lcd_1.setCursor(0,1);
-  lcd_1.print("Bluesky");
+  lcd_1.print("   Mr Bluesky");
   lcd_1.setCursor(0,0);
   delay(1000);
   lcd_1.clear();
@@ -62,7 +62,7 @@ void loop() {
     digitalWrite(exled2, HIGH);    // External LED ON
     digitalWrite(exled, LOW);
     digitalWrite(exspeak, LOW);   // Speaker OFF
-    lcd_1.print("No Motion");
+    lcd_1.print("   No Motion");
   }
 	lastProximity = proximity;
   }
@@ -70,4 +70,3 @@ void loop() {
   delay(1);
   
 }
-
