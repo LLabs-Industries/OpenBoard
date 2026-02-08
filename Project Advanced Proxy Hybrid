@@ -26,7 +26,8 @@ void setup() {
   pinMode(exled2, OUTPUT);
 
   Serial.begin(9600);
-  Serial.println("IR Proximity Sensor Initialized");
+  Serial.println("LLabs OS V0.1");
+  Serial.println("Proxmity Sensor Booting...");
 
   // Initialize both LCDs
   lcd_parallel.begin(16, 2);
