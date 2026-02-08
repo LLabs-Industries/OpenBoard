@@ -17,7 +17,8 @@ void setup() {
   pinMode(exspeak, OUTPUT);
   pinMode(exled2, OUTPUT);
   Serial.begin(9600);
-  Serial.println("IR Proximity Sensor Initialized");
+  Serial.println("LLabs OS V0.1");
+  Serial.println("Proxmity Sensor Booting...");
   lcd_1.begin(16, 2);
   lcd_1.print("LLabs Industries");
   lcd_1.setCursor(0,1);
