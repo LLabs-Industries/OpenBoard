@@ -1,5 +1,7 @@
 //Coded in C++ by Lorenzo J Munguia
-#include <Adafruit_LiquidCrystal.h>
+
+#include <LiquidCrystal.h>
+
 
 const int sensorPin = 2;  // Sensor output connected to digital pin 12
 const int ledPin = 13;     // Built-in LED on pin 13
@@ -8,7 +10,7 @@ const int exspeak = 4;     // Piezo speaker on pin 4
 const int exled2 = 5; 	// Red externl LED on pin 5
 int seconds = 0;
 
-Adafruit_LiquidCrystal lcd_1(0);
+LiquidCrystal lcd_1(7, 12, 11, 10, 9, 8);
 
 void setup() {
   pinMode(sensorPin, INPUT);
@@ -19,6 +21,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("IR Proximity Sensor Initialized");
   lcd_1.begin(16, 2);
+  delay(100);
   lcd_1.print("LLabs Industries");
   lcd_1.setCursor(0,1);
   lcd_1.print("Est 2011");
@@ -41,15 +44,17 @@ void setup() {
 }
 
 void loop() {
+  static int lastProximity = -1; //track previous state
   int proximity = digitalRead(sensorPin);
-
+  if (proximity != lastProximity) {
+    lcd_1.clear();
+    
   if (proximity == HIGH) {
     digitalWrite(ledPin, HIGH);   // Object detected
     Serial.println("Motion Detected");
     digitalWrite(exled2, LOW);     // External LED OFF
     digitalWrite(exled, HIGH);
     digitalWrite(exspeak, HIGH);  // Speaker ON
-    lcd_1.clear();
     lcd_1.print("Motion Detected");
   } else {
     digitalWrite(ledPin, LOW);    // No object
@@ -57,10 +62,11 @@ void loop() {
     digitalWrite(exled2, HIGH);    // External LED ON
     digitalWrite(exled, LOW);
     digitalWrite(exspeak, LOW);   // Speaker OFF
-    lcd_1.clear();
     lcd_1.print("No Motion");
   }
-
+	lastProximity = proximity;
+  }
+  
   delay(1);
   
 }
