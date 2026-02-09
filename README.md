@@ -14,7 +14,7 @@ Everything here is shared openly and unlicensed — use it, modify it, break it,
 ## Credits & Resources
 This work is built using:
 - LLabs Industries system administrator code (Mr. Blueskys)
-- Palm Beach Central High School engineering equipment and resources
+- Palm Beach Central High School (See extra credits)
 - Rapid prototyping and production technology tools
 
 ## License
@@ -56,3 +56,27 @@ Before uploading code, make sure all necessary libraries are installed in Arduin
 - Upload (burn) the code to your Arduino
 
 If everything is set up correctly, your project should work as expected.
+
+## Extra Credits
+Some development and testing was done using engineering lab resources at Palm Beach Central High School.
+
+Palm Beach Central Engineering Program: https://pbch.palmbeachschools.org/school-information/choice-academies/engineering-project-lead-the-way
+
+This project is not officially affiliated with or endorsed by the school.
+
+## Who this is for
+- Students learning Arduino and embedded systems
+- Teachers looking for classroom-ready hardware projects
+- Makers experimenting with I2C, SPI, and serial communication
+
+## Badges
+![Works on my machine](https://img.shields.io/badge/works-on%20my%20machine-brightgreen)
+![Arduino Compatible](https://img.shields.io/badge/Arduino-Compatible-00979D?logo=arduino&logoColor=white)
+![Status](https://img.shields.io/badge/status-experimental-orange)
+![License](https://img.shields.io/badge/license-Unlicense-blue)
+![Open Source](https://img.shields.io/badge/Open%20Source-❤-red)
+![Smoke Tested](https://img.shields.io/badge/smoke-tested%20(once)-yellow)
+![Arduino IDE](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+I use ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white) Btw
