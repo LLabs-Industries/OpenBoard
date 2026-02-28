@@ -51,12 +51,20 @@ void loop() {
     lcd_1.clear();
     
   if (proximity == HIGH) {
-    digitalWrite(ledPin, HIGH);   // Object detected
-    Serial.println("Motion Detected");
-    digitalWrite(exled2, LOW);     // External LED OFF
-    digitalWrite(exled, HIGH);
-    digitalWrite(exspeak, HIGH);  // Speaker ON
-    lcd_1.print("Motion Detected");
+      Serial.println("Motion Detected");
+      digitalWrite(ledPin, HIGH);
+      digitalWrite(exled2, LOW);
+      digitalWrite(exled, HIGH);
+      digitalWrite(exspeak, HIGH);
+      digitalWrite(exspeak, LOW);
+      delay(50);
+      digitalWrite(exspeak, HIGH);
+      digitalWrite(exspeak, LOW);
+      delay(50);
+      digitalWrite(exspeak, HIGH);
+      digitalWrite(exspeak, LOW);
+
+      lcd_1.print("Motion Detected");
   } else {
     digitalWrite(ledPin, LOW);    // No object
     Serial.println("No Motion");
