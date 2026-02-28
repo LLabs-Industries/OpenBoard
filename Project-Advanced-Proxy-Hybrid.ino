@@ -75,11 +75,18 @@ void loop() {
     lcd_i2c.clear();
 
     if (proximity == HIGH) {
+      Serial.println("Motion Detected");
       digitalWrite(ledPin, HIGH);
       digitalWrite(exled2, LOW);
       digitalWrite(exled, HIGH);
       digitalWrite(exspeak, HIGH);
-      Serial.println("Motion Detected");
+      digitalWrite(exspeak, LOW);
+      delay(50);
+      digitalWrite(exspeak, HIGH);
+      digitalWrite(exspeak, LOW);
+      delay(50);
+      digitalWrite(exspeak, HIGH);
+      digitalWrite(exspeak, LOW);
 
       lcd_parallel.print("Motion Detected");
       lcd_i2c.print("Motion Detected");
